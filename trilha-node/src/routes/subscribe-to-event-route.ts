@@ -3,7 +3,8 @@ import { z } from 'zod'
 
 export const subscribeToEventRoute: FastifyPluginAsyncZod = async app => {
   app.post(
-    '/subscriptions', {
+    '/subscriptions',
+    {
       schema: {
         summary: 'Subscribe a person to the event',
         tags: ['subscription'],
@@ -17,12 +18,12 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async app => {
             name: z.string(),
             email: z.string(),
           }),
-        },  
+        },
       },
     },
     async (request, reply) => {
       const { name, email } = request.body
-      
+
       //criar inscrição no banco de dados
 
       return reply.status(201).send({ name, email })

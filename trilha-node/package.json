@@ -14,9 +14,15 @@
     "fastify": "^5.2.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@tsconfig/node23": "^23.0.0",
     "@types/node": "^22.13.4",
     "tsx": "^3.14.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "@fastify/cors": "^10.0.2",
+    "@fastify/swagger": "^9.4.2",
+    "@fastify/swagger-ui": "^5.2.2",
+    "fastify-type-provider-zod": "^4.0.2",
+    "zod": "^3.24.2"
   }
 }
